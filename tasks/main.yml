@@ -1,0 +1,16 @@
+- name: Install auditd
+  apt: name=auditd state=present
+
+- name: Start service auditd, if not started
+  service:
+    name: auditd
+    state: started
+
+- name: Configure auditd
+  template:
+          src: "{{ audit_rules_tpl }}"
+          dest: "/etc/audit/rules.d/audit.rules"
+          mode: "0640"
+          owner: "root"
+          group: "root"
+  notify: restart auditd
