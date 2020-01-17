@@ -8,6 +8,7 @@
 ```
 audit_rules_tpl: "audit_rules.j2"
 audit_rules: []
+audit_buffer: 81920
 ```
 
 # Usage
