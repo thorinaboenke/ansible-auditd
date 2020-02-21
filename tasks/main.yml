@@ -10,7 +10,7 @@
   lineinfile:
     path: /etc/audit/auditd.conf
     regexp: '^max_log_file = '
-    line: 'max_log_file = 1000'
+    line: 'max_log_file = 10000'
   notify: restart auditd
 
 - name: Configure auditd file num
