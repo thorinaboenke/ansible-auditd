@@ -2,8 +2,10 @@
 
 dependencies: []
 galaxy_info:
-  author:              Wolfgang Hotwagner
+  role_name: auditd
+  author: Wolfgang Hotwagner
   description: This role installs and configures auditd
+  company: Austrian Institute of Technology
   license: GPL-3.0
   min_ansible_version: 2.1.0
   platforms:

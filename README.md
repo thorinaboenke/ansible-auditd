@@ -1,7 +1,8 @@
-# Ansible role for auditd
+# Ansible-Role: auditd
 
 # Requirements
 * Debian
+* Ubuntu
 
 # Defaults
 
