@@ -20,6 +20,13 @@
     line: 'num_logs = 10'
   notify: restart auditd
 
+- name: Configure auditd log format
+  lineinfile:
+    path: /etc/audit/auditd.conf
+    regexp: '^log_format = '
+    line: 'log_format = RAW'
+  notify: restart auditd
+
 - name: Configure auditd rules
   template:
     src: "{{ audit_rules_tpl }}"
